@@ -1,10 +1,14 @@
-$tablet-width: 800px;
+@import '../../variables.scss';
 
 .meteo {
     position: relative;
     height: 100vh;
     font-family: 'Roboto', sans-serif;
     color:white;
+
+    @media (min-width: $tablet-width) {
+        min-height: 700px;
+    }
 
     &.sun{
         background-image:  url("../../img/sun.jpg");
