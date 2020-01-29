@@ -1,0 +1,107 @@
+$tablet-width: 800px;
+
+.meteo {
+    position: relative;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    color:white;
+
+    &.sun{
+        background-image:  url("../../img/sun.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &.rain{
+        background-image:  url("../../img/rain.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &__position{
+        position: absolute;
+        top:30px;
+        left:30px;
+        text-align: left;
+
+        @media (min-width: $tablet-width) {
+            top:50px;
+            left:100px;
+        }
+
+        &_title{
+            font-size: 5vw;
+            font-weight: 100;
+
+            @media (min-width: $tablet-width) {
+                font-size: 30px;
+            }
+        }
+
+        &_data{
+            font-size: 4vw;
+            font-weight: 100;
+            @media (min-width: $tablet-width) {
+                font-size: 20px;
+            }
+        }
+    }
+
+    &__content{
+        position: absolute;
+        top: 15%;
+        left: 50%;
+        transform:translateX(-50%);
+
+        &_title{
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0;
+            font-size: 15vw;
+            font-weight: bold;
+
+            @media (min-width: $tablet-width) {
+                font-size: 90px;
+            }
+        }
+
+        &_subtitle{
+            margin: 0;
+            font-size: 10vw;
+            font-weight: 100;
+
+            @media (min-width: $tablet-width) {
+                font-size: 70px;
+            }
+        }
+    }
+
+    &__card{
+        position: absolute;
+        top: 35%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        justify-content: center;
+        max-width: 1400px;
+
+        @media (min-width: $tablet-width) {
+            top: 40%;
+        }
+
+    }
+
+    &__select{
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        @media (min-width: $tablet-width) {
+            bottom: 20%;
+        }
+
+    }
+}

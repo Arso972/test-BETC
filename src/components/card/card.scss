@@ -1,0 +1,58 @@
+$tablet-width: 800px;
+
+.card{
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: calc(50% - 8vw);
+    margin: 2vw;
+    padding: 4vw 2vw;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+    @media (min-width: $tablet-width) {
+        margin: 10px;
+        padding: 40px 20px;
+        width: calc(25% - 60px);
+    }
+
+    &:hover{
+        transform: scale(1.07);
+        background: rgba(0,0,0,0.8);
+    }
+
+    &__text{
+        text-align: center;
+        width: 100%;
+        font-size: 3vw;
+        margin: 4vw 0 0;
+        font-weight: 100;
+
+        @media (min-width: $tablet-width) {
+            font-size: 15px;
+            margin: 15px 0 0;
+        }
+    }
+
+    &__title{
+        font-size: 5vw;
+        margin: 0 0 0 2vw;
+        font-weight: 100;
+
+        @media (min-width: $tablet-width) {
+            font-size: 25px;
+            margin: 0 0 0 10px;
+        }
+    }
+
+    &__img{
+        width: 15vw;
+
+        @media (min-width: $tablet-width) {
+            width: 33%;
+        }
+    }
+}
